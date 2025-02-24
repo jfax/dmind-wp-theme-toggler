@@ -87,4 +87,17 @@ add_action('wp_enqueue_scripts', function () {
 			}
 		}
 	}
+
+	$jspath = WP_PLUGIN_DIR . '/'.DMIND_TOGGLER_PLUGIN_DIR.'/assets/js/';
+	$filesjs = preg_grep('/^([^.])/', scandir($jspath));
+	foreach ($filesjs as $filename) {
+		$path = $jspath . $filename;
+		$pathrel = plugins_url(DMIND_TOGGLER_PLUGIN_DIR) . '/assets/js/' . $filename;
+		if (is_file($path)) {
+			$extension = pathinfo($path, PATHINFO_EXTENSION);
+			if ($extension === 'js') {
+				wp_enqueue_script($filename, $pathrel, [], filemtime($path), true);
+			}
+		}
+	}
 }, 30);

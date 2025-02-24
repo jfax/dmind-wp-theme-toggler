@@ -130,7 +130,6 @@ html[data-theme="dark"] {
 }
 
 html {
-
     /* dark */
     --dm-background-dark: black;
     --dm-text-dark: white;
@@ -145,33 +144,33 @@ html {
     color-scheme: light;
 
     /* set defaults */
-    --background-blue: var(--dm-background-blue-light);
-    --background: var(--dm-background-light);
-    --text: var(--dm-text-light);
+    --dm-toggle-background-blue: var(--dm-background-blue-light);
+    --dm-toggle-background: var(--dm-background-light);
+    --dm-toggle-text: var(--dm-text-light);
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
         color-scheme: dark;
 
-        --background-blue: var(--dm-background-blue-dark);
-        --background: var(--dm-background-dark);
-        --text: var(--dm-text-dark);
+        --dm-toggle-background-blue: var(--dm-background-blue-dark);
+        --dm-toggle-background: var(--dm-background-dark);
+        --dm-toggle-text: var(--dm-text-dark);
     }
 }
 
 [data-theme="light"] {
     color-scheme: light;
 
-    --background-blue: var(--dm-background-blue-light);
-    --background: var(--dm-background-light);
-    --text: var(--dm-text-light);
+    --dm-toggle-background-blue: var(--dm-background-blue-light);
+    --dm-toggle-background: var(--dm-background-light);
+    --dm-toggle-text: var(--dm-text-light);
 }
 
 [data-theme="dark"] {
     color-scheme: dark;
 
-    --background-blue: var(--dm-background-blue-dark);
-    --background: var(--dm-background-dark);
-    --text: var(--dm-text-dark);
+    --dm-toggle-background-blue: var(--dm-background-blue-dark);
+    --dm-toggle-background: var(--dm-background-dark);
+    --dm-toggle-text: var(--dm-text-dark);
 }

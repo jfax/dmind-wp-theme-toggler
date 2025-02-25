@@ -42,9 +42,9 @@ function dmind_theme_toggler(): void {
 
 function dmind_theme_toggler_item($items, $args): string {
 	#if ($args->theme_location === 'primary') {
-	$icon = '<li class="menu-item custom-theme-toggle">
+	$icon = '<li class="menu-item mega-menu-item custom-theme-toggle">
             <button aria-label="'.__('Dunkelmodus ein- bzw. ausschalten', DMIND_TOGGLER_PLUGIN_DIR).'" aria-live="polite" class="theme-toggle" id="theme-toggle" title="'.__('Zwischen hell und dunkel wechseln', DMIND_TOGGLER_PLUGIN_DIR).'">
-                <svg aria-hidden="true" class="sun-and-moon" height="24" viewBox="0 0 24 24" width="24">
+                <svg class="sun-and-moon" height="24" viewBox="0 0 24 24" width="24">
                     <mask class="moon" id="moon-mask">
                         <rect fill="white" height="100%" width="100%" x="0" y="0"></rect>
                         <circle cx="24" cy="10" fill="black" r="6"></circle>

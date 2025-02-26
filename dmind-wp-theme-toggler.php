@@ -42,14 +42,15 @@ function dmind_theme_toggler(): void {
 
 function dmind_theme_toggler_item($items, $args): string {
 	#if ($args->theme_location === 'primary') {
+	$rand = rand(1000, 9999);
 	$icon = '<li class="menu-item mega-menu-item custom-theme-toggle">
-            <button aria-label="'.__('Dunkelmodus ein- bzw. ausschalten', DMIND_TOGGLER_PLUGIN_DIR).'" aria-live="polite" class="theme-toggle" id="theme-toggle" title="'.__('Zwischen hell und dunkel wechseln', DMIND_TOGGLER_PLUGIN_DIR).'">
+            <button aria-label="'.__('Dunkelmodus ein- bzw. ausschalten', DMIND_TOGGLER_PLUGIN_DIR).'" aria-live="polite" class="theme-toggle" title="'.__('Nachtmodus aktivieren oder deaktivieren', DMIND_TOGGLER_PLUGIN_DIR).'">
                 <svg class="sun-and-moon" height="24" viewBox="0 0 24 24" width="24">
-                    <mask class="moon" id="moon-mask">
+                    <mask class="moon" id="moon-mask-' . $rand . '">
                         <rect fill="white" height="100%" width="100%" x="0" y="0"></rect>
                         <circle cx="24" cy="10" fill="black" r="6"></circle>
                     </mask>
-                    <circle class="sun" cx="12" cy="12" fill="currentColor" mask="url(#moon-mask)" r="6"></circle>
+                    <circle class="sun" cx="12" cy="12" fill="currentColor" mask="url(#moon-mask-' . $rand . ')" r="6"></circle>
                     <g class="sun-beams" stroke="currentColor">
                         <line x1="12" x2="12" y1="1" y2="3"></line>
                         <line x1="12" x2="12" y1="21" y2="23"></line>

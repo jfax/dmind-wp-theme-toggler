@@ -28,7 +28,7 @@ const reflectPreference = () => {
         .setAttribute('data-theme', theme.value)
 
     document
-        .querySelector('#theme-toggle')
+        .querySelector('.theme-toggle')
         ?.setAttribute('aria-label', theme.value)
 }
 
@@ -45,7 +45,7 @@ window.onload = () => {
 
     // now this script can find and listen for clicks on the control
     document
-        .querySelector('#theme-toggle')
+        .querySelector('.theme-toggle')
         .addEventListener('click', onClick)
 }
 
